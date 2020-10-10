@@ -24,6 +24,10 @@ def convert_ugoira(name, metadata):
             durationList.append(frame.delay)
 
         imgList[0].save(_illuid+".gif", format="GIF", append_images=imgList[1:], duration=durationList, loop=0, save_all=True)
+        
+        f.close()
+
+        os.remove(name)
 
     return
 
